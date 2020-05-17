@@ -8,14 +8,14 @@
 
             <b-form-group id="userInputGroup" label="User Name" label-for="userInput">
                 <b-form-input
-                id="userInput"
-                type="text"
-                placeholder="Enter user name"
-                v-model="userId"
-                autocomplete="off"
-                :disabled="loading"
-                required
-                ></b-form-input>
+                    id="userInput"
+                    type="text"
+                    placeholder="Enter user name"
+                    v-model="userId"
+                    autocomplete="off"
+                    :disabled="loading"
+                    required
+                />
             </b-form-group>
 
             <b-button
@@ -33,14 +33,26 @@
 </template>
 
 <script>
+/* eslint-disable */
 
-import { mapState, mapGetters } from 'vuex'
+import { mapState, mapGetters, mapActions } from 'vuex'
 
 export default {
     name: 'login-form',
     data () {
         return {
             userId: ''
+        }
+    },
+    methods: {
+        ...mapActions([
+            'login'
+        ]),
+        async onSubmit() {
+            const result = await this.login(this.userId);
+            if(result) {
+                this.$router.push('chat');
+            }
         }
     },
     computed: {
