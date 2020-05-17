@@ -1,3 +1,4 @@
+/* eslint-disable */
 <template>
     <div class="room-list">
         <h4>Channels</h4>

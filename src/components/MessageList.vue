@@ -1,3 +1,4 @@
+/* eslint-disable */
 <template>
     <div class="message-list">
         <h4>Messages</h4>

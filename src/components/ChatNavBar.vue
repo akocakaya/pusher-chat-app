@@ -1,3 +1,4 @@
+/* eslint-disable */
 <template>
     <b-navbar id="chat-navbar" toggleable="md" type="dark" variant="info">
         <b-navbar-brand href="#">

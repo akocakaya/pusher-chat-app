@@ -1,3 +1,4 @@
+/* eslint-disable */
 <template>
     <div class="login-form">
         <h5 class="text-center">Chat Login</h5>

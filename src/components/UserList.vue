@@ -1,3 +1,4 @@
+/* eslint-disable */
 <template>
     <div class="user-list">
         <h4>Members</h4>

@@ -1,3 +1,4 @@
+/* eslint-disable */
 <template>
     <div class="message-form ld-over">
         <small class="text-muted">@{{ user.username }}</small>
