@@ -26,6 +26,7 @@ export default new Vuex.Store({
         userTyping: null
     },
     getters: {
+        // eslint-disable-next-line
         hasError: state => state.error ? true : false
     },
     mutations,
