@@ -13,7 +13,7 @@ module.exports = {
     rules: {	
         'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',	
         'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',	
-        "vue/script-indent": ["warn",2,{"baseIndent": 2}],
-        "indent": ["error", 4]
+        "vue/script-indent": ["warn",0,{"baseIndent": 2}],
+        "indent": ["warn", 4]
     }	
 }
