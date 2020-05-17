@@ -9,13 +9,13 @@ Vue.use(Vuex)
 const debug = process.env.NODE_ENV !== 'production'
 
 const vuexLocal = new VuexPersistence({
-  storage: window.localStorage
+    storage: window.localStorage
 })
 
 export default new Vuex.Store({
-  state: {},
-  mutations,
-  actions,
-  plugins: [vuexLocal.plugin],
-  strict: debug
+    state: {},
+    mutations,
+    actions,
+    plugins: [vuexLocal.plugin],
+    strict: debug
 })
