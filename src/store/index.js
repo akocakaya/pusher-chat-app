@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import VuexPersistence from 'vuex-persist'  //The vuex-persist package ensures that our Vuex state is saved between page reloads or refreshes.
+import VuexPersistence from 'vuex-persist' // The vuex-persist package ensures that our Vuex state is saved between page reloads or refreshes.
 import mutations from './mutations'
 import actions from './actions'
 
@@ -13,7 +13,21 @@ const vuexLocal = new VuexPersistence({
 })
 
 export default new Vuex.Store({
-    state: {},
+    state: {
+        loading: false,
+        sending: false,
+        error: null,
+        user: [],
+        reconnect: false,
+        activeRoom: null,
+        rooms: [],
+        users: [],
+        messages: [],
+        userTyping: null
+    },
+    getters: {
+        hasError: state => state.error ? true : false
+    },
     mutations,
     actions,
     plugins: [vuexLocal.plugin],
